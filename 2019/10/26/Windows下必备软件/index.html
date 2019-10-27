@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="Shirvy&#39;s blog">
 <meta property="og:description" content="趁着今天有空，整理了一下我在Windows下用到的一些提高效率的工具 EverythingEverything是一个全局搜索的软件，是我用过的搜索速度最快的软件，搜索电脑中任何的文件都是毫秒级的反应速度。 AutoHotKeyAutoHotKey是一个自定义按键脚本的软件（所谓的‘宏’），可以将按键改成其他任意的一个按键，或者是多个按键同时点击。">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-10-27T02:11:10.098Z">
+<meta property="og:updated_time" content="2019-10-27T04:39:38.998Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -128,7 +128,7 @@
         <span class="column is-narrow">
             
             
-            2 分钟 读完 (约 264 字)
+            2 分钟 读完 (约 291 字)
         </span>
         
     </div>
@@ -141,6 +141,7 @@
 <p>比如说我的笔记本PrintScreen和Insert是在同一个按键上，而且默认启用的是PrintScreen，如果要使用Insert键，则需要在按住Fn键的同时再按PrintScreen键，在进行复制（粘贴）的时候就非常的麻烦，要按三个键，Ctrl+Fn+PrintScreen（Shift+Fn+PrintScreen）。</p>
 <p>而使用AutoHotKey之后就可以将Ctrl+PrintScreen改成Ctrl+Insert了,脚本很简单，几行就搞定了：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;^PrintScreen::</span><br><span class="line">^Ins</span><br><span class="line">return</span><br><span class="line">&lt;+PrintScreen::</span><br><span class="line">+Ins</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+<p>最后再将脚本放到C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp目录下就能开机启动了。</p>
 
     
     </div>
