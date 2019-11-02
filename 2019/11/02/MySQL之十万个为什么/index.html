@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="Shirvy&#39;s blog">
 <meta property="og:description" content="索引相关 CREATE INDEX 和 ALTER TABLE ADD INDEX的区别？ CREATE INDEX ‘idx’ ON table (column); 一次只能创建一个索引，索引名不能为空。 ALTER TABLE table ADD INDEX  ‘idx1’ (column1), ADD INDEX ‘idx2’ (column2); 一次可以创建多个索引，索引名可以为空（这时">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-11-02T08:01:38.294Z">
+<meta property="og:updated_time" content="2019-11-02T15:19:08.975Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -128,7 +128,7 @@
         <span class="column is-narrow">
             
             
-            几秒 读完 (约 97 字)
+            1 分钟 读完 (约 188 字)
         </span>
         
     </div>
@@ -139,8 +139,15 @@
 <p>CREATE INDEX ‘idx’ ON table (column); 一次只能创建一个索引，索引名不能为空。</p>
 <p>ALTER TABLE table ADD INDEX  ‘idx1’ (column1), ADD INDEX ‘idx2’ (column2); 一次可以创建多个索引，索引名可以为空（这时索引名默认取字段名，聚合索引默认取第一个字段名）。</p>
 </li>
-<li></li>
+<li><p>COUNT(*) 和 COUNT(1)有什么区别</p>
+<p><strong>没区别（无论是执行计划，还是结果，还是性能）</strong></p>
+<p>COUNT(*)作用是返回所有的行数。</p>
+<p>COUNT(1)作用是给所有行添加一个名为‘1’的虚拟的列，然后统计这一列的行数。</p>
+<p>同理，COUNT(-1)和COUNT(100)和COUNT(‘a’)都是一样的。</p>
+</li>
 </ul>
+<a id="more"></a>
+
 
     
     </div>
